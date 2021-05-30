@@ -1,6 +1,7 @@
 import telebot
 from settings import token, answers, lectures
 from keyboards import get_start_keyboard, get_lectures_keyboard, get_tests_keyboard
+from test import Test
 
 bot = telebot.TeleBot(token, parse_mode=None)
 
@@ -42,27 +43,13 @@ def callback_query(call):
         if "выберите тему теста" in previous_text.lower():
             lecture_number = previous_text[previous_text.index("«") + 1:previous_text.index(".")]
             test_number = call_data[0:call_data.index('.')]
-            start_test(lecture_number, test_number, call.message.chat.id)
+            the_test = Test(bot=bot,
+                            chat_id=call.message.chat.id,
+                            lecture_number=lecture_number,
+                            test_number=test_number)
+            the_test.start()
         elif "выберите лекцию" in previous_text.lower():
             bot.edit_message_text(text=f"Вы выбрали лекцию «{call_data}». Выберите тему теста:",
                                   chat_id=call.message.chat.id,
                                   message_id=call.message.id,
                                   reply_markup=get_tests_keyboard(call_data[0:call_data.index('.')]))
-
-
-def start_test(lecture_number, test_number, chat_id):
-    questions = lectures[lecture_number]["tests"][test_number]["questions"]
-    right_answers = len(questions)
-    current_right_answers = 0
-    current_question_number = 1
-
-    current_question = questions[str(current_question_number)]
-    bot.send_message(chat_id=chat_id, text=current_question["question_text"])
-    bot.register_next_step_handler(chat_id=chat_id, callback=is_answer_right)
-
-
-@bot.message_handler(content_types=["text"])
-def is_answer_right(message):
-    if message.text.lower() == "1":
-        return True
-    return False

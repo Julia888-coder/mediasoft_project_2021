@@ -6,8 +6,13 @@
         "name": "1. ...",
         "questions": {
           "1": {
-            "question_text": "Назовите процесс",
-            "correct_answer": "Text",
+            "question_text": "1. Напиши имя Юля",
+            "correct_answer": "Юля",
+            "image": "img.url"
+          },
+          "2": {
+            "question_text": "2. Напши имя Паша",
+            "correct_answer": "Паша",
             "image": "img.url"
           }
         }
