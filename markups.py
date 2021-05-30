@@ -2,7 +2,7 @@ from telebot.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeybo
 from settings import lectures
 
 
-def get_start_keyboard():
+def start_markup():
     markup = ReplyKeyboardMarkup(row_width=1, resize_keyboard=True, one_time_keyboard=True)
     books_button = KeyboardButton('Книги')
     lectures_button = KeyboardButton('Лекции')
@@ -15,7 +15,11 @@ def get_start_keyboard():
     return markup
 
 
-def get_lectures_keyboard():
+def empty_markup():
+    return ReplyKeyboardMarkup(row_width=1, resize_keyboard=True, one_time_keyboard=True)
+
+
+def lectures_markup():
     markup = InlineKeyboardMarkup()
 
     for i in range(1, len(lectures) + 1):
@@ -25,7 +29,7 @@ def get_lectures_keyboard():
     return markup
 
 
-def get_tests_keyboard(lecture_number: str):
+def tests_markup(lecture_number: str):
     markup = InlineKeyboardMarkup()
 
     lecture_tests = lectures[lecture_number]["tests"]
