@@ -1,15 +1,19 @@
 import telebot
 from settings import token, answers
-from markups import start_markup, lectures_markup, tests_markup
+from markups import inf_markup, lectures_markup, tests_markup, start_markup
 from test import Test
 
 bot = telebot.TeleBot(token, parse_mode=None)
 
-
 @bot.message_handler(commands=['start'])
-def send_welcome(message):
+def send_hay(message):
     user_id = message.chat.id
     bot.send_message(user_id, answers['start'], reply_markup=start_markup())
+
+@bot.message_handler(commands=['inf'])
+def send_welcome(message):
+    user_id = message.chat.id
+    bot.send_message(user_id, answers['inf'], reply_markup=inf_markup())
 
 
 @bot.message_handler(commands=['help'])
@@ -27,7 +31,7 @@ def send_lectures(message):
 @bot.message_handler(regexp='Книги')
 def send_books(message):
     user_id = message.chat.id
-    bot.send_message(user_id, answers['Книги'], reply_markup=lectures_markup())
+    bot.send_message(user_id, answers['Книги'])
 
 
 @bot.callback_query_handler(func=lambda call: True)
