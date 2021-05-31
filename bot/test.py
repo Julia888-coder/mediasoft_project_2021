@@ -11,7 +11,7 @@ class Test:
         self.bot = bot
 
     def start(self):
-        self.bot.send_message(chat_id=self.chat_id, text=f"Начинаем тест по теме {self.name}. Поехали!")
+        self.bot.send_message(chat_id=self.chat_id, text=f"Начинаем тест по теме «{self.name}». Поехали!")
         message = self.bot.send_message(chat_id=self.chat_id,
                                         text=self.questions[str(self.current_question)]["question_text"])
         self.bot.register_next_step_handler(message, self.is_answer_right)
