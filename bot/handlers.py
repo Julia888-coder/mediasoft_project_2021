@@ -1,19 +1,19 @@
 import telebot
 from settings import token, answers
-from markups import inf_markup, lectures_markup, tests_markup, start_markup
+from markups import inf_markup, lectures_markup, tests_markup, empty_markup
 from test import Test
 
 bot = telebot.TeleBot(token, parse_mode=None)
 
 
 @bot.message_handler(commands=['start'])
-def send_hay(message):
+def send_hello(message):
     user_id = message.chat.id
-    bot.send_message(user_id, answers['start'], reply_markup=start_markup())
+    bot.send_message(user_id, answers['start'], reply_markup=empty_markup())
 
 
 @bot.message_handler(commands=['inf'])
-def send_welcome(message):
+def send_info(message):
     user_id = message.chat.id
     bot.send_message(user_id, answers['inf'], reply_markup=inf_markup())
 
@@ -21,7 +21,7 @@ def send_welcome(message):
 @bot.message_handler(commands=['help'])
 def send_help(message):
     user_id = message.chat.id
-    bot.send_message(user_id, answers['help'])
+    bot.send_message(user_id, answers['help'], reply_markup=empty_markup())
 
 
 @bot.message_handler(commands=['tests'])

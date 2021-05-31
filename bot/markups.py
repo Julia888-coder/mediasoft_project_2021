@@ -2,10 +2,6 @@ from telebot.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeybo
 from settings import lectures
 
 
-def start_markup():
-    return ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
-
-
 def inf_markup():
     markup = ReplyKeyboardMarkup(row_width=1, resize_keyboard=True, one_time_keyboard=True)
     books_button = KeyboardButton('Книги')
