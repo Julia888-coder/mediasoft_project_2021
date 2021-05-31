@@ -5,10 +5,12 @@ from test import Test
 
 bot = telebot.TeleBot(token, parse_mode=None)
 
+
 @bot.message_handler(commands=['start'])
 def send_hay(message):
     user_id = message.chat.id
     bot.send_message(user_id, answers['start'], reply_markup=start_markup())
+
 
 @bot.message_handler(commands=['inf'])
 def send_welcome(message):

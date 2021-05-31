@@ -20,7 +20,7 @@ class Test:
         if message.text.lower() == "завершить тест":
             self.bot.send_message(chat_id=self.chat_id, text="Тест закончен!")
             return
-        elif message.text.lower() == self.questions[str(self.current_question)]["correct_answer"].lower():
+        elif message.text.lower() in self.questions[str(self.current_question)]["correct_answer"]:
             self.bot.send_message(chat_id=self.chat_id, text="Верно!")
             self.current_question += 1
             if self.current_question > self.number_of_questions:
