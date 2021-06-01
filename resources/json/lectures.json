@@ -64,16 +64,6 @@
             "image": "img.url"
           }
         }
-      },
-      "2": {
-        "name": "2. ...",
-        "questions": {
-          "1": {
-            "question_text": "Назовите процесс",
-            "correct_answer": "Text",
-            "image": "img.url"
-          }
-        }
       }
     }
   },
@@ -81,31 +71,149 @@
     "lecture_name": "2. Моделирование бизнес-процессов",
     "tests": {
       "1": {
-        "name": "1. ...",
+        "name": "1. Угадай нотацию",
         "questions": {
           "1": {
-            "question_text": "Назовите процесс",
-            "correct_answer": "Text",
-            "image": "img.url"
+            "question_text": "Какая это нотация?",
+            "correct_answer": "flowchart",
+            "image": "img.url 2/1/1/"
+          },
+          "2": {
+            "question_text": "Какая это нотация?",
+            "correct_answer": [
+              "idef0",
+              "IDEF0"
+            ],
+            "image": "img.url 2/1/2/"
+          },
+          "3": {
+            "question_text": "Какая это нотация?",
+            "correct_answer": [
+              "epc",
+              "EPC"
+            ],
+            "image": "img.url 2/1/3/"
+          },
+          "4": {
+            "question_text": "Какая это нотация?",
+            "correct_answer": [
+              "idef0",
+              "IDEF0"
+            ],
+            "image": "img.url 2/1/4/"
+          },
+          "5": {
+            "question_text": "Какая это нотация?",
+            "correct_answer": [
+              "BPMN",
+              "bpmn"
+            ],
+            "image": "img.url 2/1/5/"
+          }
+        }
+      },
+      "2": {
+        "name": "1. Элементы BPMN - легко!",
+        "questions": {
+          "1": {
+            "question_text": "Что тут изображено?",
+            "correct_answer": [
+              "event",
+              "событие"
+            ],
+            "image": "img.url 2/2/1/"
+          },
+          "2": {
+            "question_text": "Какой это вид события?",
+            "correct_answer": [
+              "сигналы",
+              "сигнал"
+            ],
+            "image": "img.url 2/2/3/"
+          },
+          "3": {
+            "question_text": "Какой это вид события?",
+            "correct_answer": [
+              "сообщения",
+              "сообщение"
+            ],
+            "image": "img.url 2/2/2/"
+          },
+          "4": {
+            "question_text": "Какой это вид события?",
+            "correct_answer": [
+              "таймеры",
+              "таймер"
+            ],
+            "image": "img.url 2/2/4/"
+          },
+          "5": {
+            "question_text": "Какой это вид события?",
+            "correct_answer": [
+              "ошибки",
+              "ошибка"
+            ],
+            "image": "img.url 2/2/5/"
+          },
+          "6": {
+            "question_text": "Что тут изображено?",
+            "correct_answer": [
+              "activity",
+              "действие"
+            ],
+            "image": "img.url 2/2/6/"
+          },
+          "7": {
+            "question_text": "Что тут изображено?",
+            "correct_answer": [
+              "gateway",
+              "шлюз"
+            ],
+            "image": "img.url 2/2/7/"
+          },
+          "8": {
+            "question_text": "Какой вид шлюза изображён?",
+            "correct_answer": [
+              "параллельный",
+              "параллельный шлюз"
+            ],
+            "image": "img.url 2/2/8/"
+          },
+          "9": {
+            "question_text": "Какой вид шлюза изображён?",
+            "correct_answer": [
+              "эксклюзивный",
+              "эксклюзивный шлюз"
+            ],
+            "image": "img.url 2/2/9/"
+          },
+          "10": {
+            "question_text": "Какой вид шлюза изображён?",
+            "correct_answer": [
+              "неэксклюзивный",
+              "неэксклюзивный шлюз",
+              "yt'rcrk.pbdysq ik.p",
+              "yt'rcrk.pbdysq"
+            ],
+            "image": "img.url 2/2/10/"
           }
         }
       }
-    }
-  },
-  "3": {
-    "lecture_name": "3. Клиент-серверная архитектура",
-    "tests": {
-      "1": {
-        "name": "1. ...",
-        "questions": {
-          "1": {
-            "question_text": "Назовите процесс",
-            "correct_answer": "Text",
-            "image": "img.url"
+    },
+    "3": {
+      "lecture_name": "3. Клиент-серверная архитектура",
+      "tests": {
+        "1": {
+          "name": "1. Coming soon",
+          "questions": {
+            "1": {
+              "question_text": "SOOOOON",
+              "correct_answer": "Text",
+              "image": "img.url"
+            }
           }
         }
       }
     }
   }
 }
-
