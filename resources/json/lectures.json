@@ -15,7 +15,7 @@
               "waterfall model",
               "waterfall"
             ],
-            "image": "img.url"
+            "image_path": "img.url"
           },
           "2": {
             "question_text": "2. Напишите название модели исходя их описания: \n\nВсе стадии проекта в данной модели выполняются в строгой последовательности",
@@ -27,7 +27,7 @@
               "waterfall model",
               "waterfall"
             ],
-            "image": "img.url"
+            "image_path": "img.url"
           },
           "3": {
             "question_text": "3. Напишите название модели исходя их описания:\n\nМодель включает серии подходов к разработке программного обеспечения, ориентированных на использование итеративной разработки , динамическое формирование требований и обеспечение их реализации в результате постоянного взаимодействия внутри самоорганизующихся рабочих групп, состоящих из специалистов различного профиля. ",
@@ -37,7 +37,7 @@
               "agile",
               "гибкая"
             ],
-            "image": "img.url"
+            "image_path": "img.url"
           },
           "4": {
             "question_text": "4. К минусам какой модели относится данный: \n\nСложности при формулировке четких требований и невозможность их изменения",
@@ -49,7 +49,7 @@
               "waterfall model",
               "waterfall"
             ],
-            "image": "img.url"
+            "image_path": "img.url"
           },
           "5": {
             "question_text": "5. Какая модель представлена на картинке?",
@@ -61,7 +61,7 @@
               "waterfall model",
               "waterfall"
             ],
-            "image": "img.url"
+            "image_path": "../resources/images/1.1.5.png"
           }
         }
       }
@@ -76,44 +76,32 @@
           "1": {
             "question_text": "Какая это нотация?",
             "correct_answer": "flowchart",
-            "image": "img.url 2/1/1/"
+            "image_path": "../resources/images/2.1.1.png"
           },
           "2": {
             "question_text": "Какая это нотация?",
-            "correct_answer": [
-              "idef0",
-              "IDEF0"
-            ],
-            "image": "img.url 2/1/2/"
+            "correct_answer": "idef0",
+            "image_path": "../resources/images/2.1.2.png"
           },
           "3": {
             "question_text": "Какая это нотация?",
-            "correct_answer": [
-              "epc",
-              "EPC"
-            ],
-            "image": "img.url 2/1/3/"
+            "correct_answer": "epc",
+            "image_path": "../resources/images/2.1.3.png"
           },
           "4": {
             "question_text": "Какая это нотация?",
-            "correct_answer": [
-              "idef0",
-              "IDEF0"
-            ],
-            "image": "img.url 2/1/4/"
+            "correct_answer": "idef0",
+            "image_path": "../resources/images/2.1.4.png"
           },
           "5": {
             "question_text": "Какая это нотация?",
-            "correct_answer": [
-              "BPMN",
-              "bpmn"
-            ],
-            "image": "img.url 2/1/5/"
+            "correct_answer": "bpmn",
+            "image_path": "../resources/images/2.1.5.png"
           }
         }
       },
       "2": {
-        "name": "1. Элементы BPMN - легко!",
+        "name": "2. Элементы BPMN - легко!",
         "questions": {
           "1": {
             "question_text": "Что тут изображено?",
@@ -121,15 +109,12 @@
               "event",
               "событие"
             ],
-            "image": "img.url 2/2/1/"
+            "image_path": "../resources/images/2.2.1.png"
           },
           "2": {
             "question_text": "Какой это вид события?",
-            "correct_answer": [
-              "сигналы",
-              "сигнал"
-            ],
-            "image": "img.url 2/2/3/"
+            "correct_answer": "сигналы",
+            "image_path": "../resources/images/2.2.3.png"
           },
           "3": {
             "question_text": "Какой это вид события?",
@@ -137,15 +122,12 @@
               "сообщения",
               "сообщение"
             ],
-            "image": "img.url 2/2/2/"
+            "image_path": "../resources/images/2.2.2.png"
           },
           "4": {
             "question_text": "Какой это вид события?",
-            "correct_answer": [
-              "таймеры",
-              "таймер"
-            ],
-            "image": "img.url 2/2/4/"
+            "correct_answer": "таймеры",
+            "image_path": "../resources/images/2.2.4.png"
           },
           "5": {
             "question_text": "Какой это вид события?",
@@ -153,7 +135,7 @@
               "ошибки",
               "ошибка"
             ],
-            "image": "img.url 2/2/5/"
+            "image_path": "../resources/images/2.2.5.png"
           },
           "6": {
             "question_text": "Что тут изображено?",
@@ -161,7 +143,7 @@
               "activity",
               "действие"
             ],
-            "image": "img.url 2/2/6/"
+            "image_path": "../resources/images/2.2.6.png"
           },
           "7": {
             "question_text": "Что тут изображено?",
@@ -169,48 +151,37 @@
               "gateway",
               "шлюз"
             ],
-            "image": "img.url 2/2/7/"
+            "image_path": "../resources/images/2.2.7.png"
           },
           "8": {
             "question_text": "Какой вид шлюза изображён?",
-            "correct_answer": [
-              "параллельный",
-              "параллельный шлюз"
-            ],
-            "image": "img.url 2/2/8/"
+            "correct_answer": "параллельный шлюз",
+            "image_path": "../resources/images/2.2.8.png"
           },
           "9": {
             "question_text": "Какой вид шлюза изображён?",
-            "correct_answer": [
-              "эксклюзивный",
-              "эксклюзивный шлюз"
-            ],
-            "image": "img.url 2/2/9/"
+            "correct_answer": "эксклюзивный шлюз",
+            "image_path": "../resources/images/2.2.9.png"
           },
           "10": {
             "question_text": "Какой вид шлюза изображён?",
-            "correct_answer": [
-              "неэксклюзивный",
-              "неэксклюзивный шлюз",
-              "yt'rcrk.pbdysq ik.p",
-              "yt'rcrk.pbdysq"
-            ],
-            "image": "img.url 2/2/10/"
+            "correct_answer": "неэксклюзивный шлюз",
+            "image_path": "../resources/images/2.2.10.png"
           }
         }
       }
-    },
-    "3": {
-      "lecture_name": "3. Клиент-серверная архитектура",
-      "tests": {
-        "1": {
-          "name": "1. Coming soon",
-          "questions": {
-            "1": {
-              "question_text": "SOOOOON",
-              "correct_answer": "Text",
-              "image": "img.url"
-            }
+    }
+  },
+  "3": {
+    "lecture_name": "3. Клиент-серверная архитектура",
+    "tests": {
+      "1": {
+        "name": "1. Coming soon",
+        "questions": {
+          "1": {
+            "question_text": "SOOOOON",
+            "correct_answer": "Text",
+            "image_path": "img.url"
           }
         }
       }
