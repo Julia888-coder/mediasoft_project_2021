@@ -5,12 +5,26 @@ from settings import lectures
 def inf_markup():
     markup = ReplyKeyboardMarkup(row_width=1, resize_keyboard=True, one_time_keyboard=True)
     books_button = KeyboardButton('Книги')
-    lectures_button = KeyboardButton('Лекции')
+    videolectures_button = KeyboardButton('Видеолекции')
     articles_button = KeyboardButton('Статьи')
+    resourses_button = KeyboardButton('Ресурсы')
     back_button = KeyboardButton('Назад')
-    markup.row(books_button)
-    markup.row(lectures_button)
-    markup.row(articles_button)
+    markup.row(books_button,videolectures_button)
+    #markup.row(videolectures_button)
+    markup.row(articles_button, resourses_button)
+    #markup.row(resourses_button)
+    markup.row(back_button)
+    return markup
+
+def articles_markup():
+    markup = ReplyKeyboardMarkup(row_width=1, resize_keyboard=True, one_time_keyboard=True)
+    articles1_button = KeyboardButton('Лекция 1')
+    articles2_button = KeyboardButton('Лекция 2')
+    articles3_button = KeyboardButton('Лекция 3')
+    back_button = KeyboardButton('Назад')
+    markup.row(articles1_button)
+    markup.row(articles2_button)
+    markup.row(articles3_button)
     markup.row(back_button)
     return markup
 
