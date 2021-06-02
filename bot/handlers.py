@@ -6,7 +6,7 @@ from telebot import TeleBot
 bot = TeleBot(token, parse_mode=None)
 
 
-@bot.message_handler(commands=["start", "inf", "help", "url", "tests"])
+@bot.message_handler(commands=["start", "inf", "help", "url", "tests", "homework"])
 def handle_commands(message):
     user_input = message.text.lower()
     if user_input == "/start":
