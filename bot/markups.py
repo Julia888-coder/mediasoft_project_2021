@@ -7,6 +7,13 @@ def empty_markup():
     return ReplyKeyboardRemove()
 
 
+def test_markup():
+    markup = ReplyKeyboardMarkup(resize_keyboard=True)
+    end_test_button = KeyboardButton('Завершить')
+    markup.add(end_test_button)
+    return markup
+
+
 def inf_markup():
     markup = ReplyKeyboardMarkup(resize_keyboard=True)
     books_button = KeyboardButton('Книги')

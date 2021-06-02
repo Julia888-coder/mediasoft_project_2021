@@ -6,45 +6,21 @@ from telebot import TeleBot
 bot = TeleBot(token, parse_mode=None)
 
 
-@bot.message_handler(commands=["start"])
-def send_hello(message):
-    user_id = message.chat.id
-    bot.send_message(user_id, answers["start"], reply_markup=markups.empty_markup())
-
-
-@bot.message_handler(commands=["inf"])
-def send_info(message):
-    user_id = message.chat.id
-    bot.send_message(user_id, answers["inf"], reply_markup=markups.inf_markup())
-
-
-@bot.message_handler(commands=["help"])
-def send_help(message):
-    user_id = message.chat.id
-    bot.send_message(user_id, answers["help"], reply_markup=markups.empty_markup())
-
-
-@bot.message_handler(commands=["url"])
-def send_url(message):
-    bot.send_message(message.chat.id, answers["url"], reply_markup=markups.url_markup())
-
-
-@bot.message_handler(commands=["tests"])
-def send_lectures(message):
-    user_id = message.chat.id
-    bot.send_message(user_id, answers["tests"], reply_markup=markups.lectures_markup())
-
-
-@bot.message_handler(commands=["homework"])
-def send_homework_info(message):
-    user_id = message.chat.id
-    bot.send_message(user_id, answers["homework"], reply_markup=markups.homework_markup())
-
-
-@bot.message_handler(regexp="Назад")
-def go_back(message):
-    user_id = message.chat.id
-    bot.send_message(user_id, answers["inf"], reply_markup=markups.inf_markup())
+@bot.message_handler(commands=["start", "inf", "help", "url", "tests"])
+def handle_commands(message):
+    user_input = message.text.lower()
+    if user_input == "/start":
+        bot.send_message(message.chat.id, answers["start"], reply_markup=markups.empty_markup())
+    elif user_input == "/inf":
+        bot.send_message(message.chat.id, answers["inf"], reply_markup=markups.inf_markup())
+    elif user_input == "/help":
+        bot.send_message(message.chat.id, answers["help"], reply_markup=markups.empty_markup())
+    elif user_input == "/url":
+        bot.send_message(message.chat.id, answers["url"], reply_markup=markups.url_markup())
+    elif user_input == "/tests":
+        bot.send_message(message.chat.id, answers["tests"], reply_markup=markups.lectures_markup())
+    elif user_input == "/homework":
+        bot.send_message(message.chat.id, answers["homework"], reply_markup=markups.homework_markup())
 
 
 @bot.message_handler(content_types=["text"])
@@ -75,7 +51,7 @@ def handle_text_message(message):
 
 
 @bot.callback_query_handler(func=lambda call: True)
-def callback_query(call):
+def handle_callback_query(call):
     call_data = call.data
     if call_data == "Назад":
         bot.edit_message_text(text=answers["tests"],
