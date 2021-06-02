@@ -14,10 +14,15 @@ class Test:
         self.bot.send_message(chat_id=self.chat_id, text=f"Начинаем тест по теме «{self.name}». Поехали!")
         message = self.bot.send_message(chat_id=self.chat_id,
                                         text=self.questions[str(self.current_question)]["question_text"])
+        try:
+            photo = open(self.questions[str(self.current_question)]["image_path"], 'rb')
+            self.bot.send_photo(self.chat_id, photo)
+        except FileNotFoundError as e:
+            print(e)
         self.bot.register_next_step_handler(message, self.is_answer_right)
 
     def is_answer_right(self, message):
-        if message.text.lower() == "завершить тест":
+        if "завершить" in message.text.lower():
             self.bot.send_message(chat_id=self.chat_id, text="Тест закончен!")
             return
         elif message.text.lower() in self.questions[str(self.current_question)]["correct_answer"]:
@@ -28,6 +33,11 @@ class Test:
                 return
             message = self.bot.send_message(chat_id=self.chat_id,
                                             text=self.questions[str(self.current_question)]["question_text"])
+            try:
+                photo = open(self.questions[str(self.current_question)]["image_path"], 'rb')
+                self.bot.send_photo(self.chat_id, photo)
+            except FileNotFoundError as e:
+                print(e)
         else:
             message = self.bot.send_message(chat_id=self.chat_id, text="Неверно! Повторите попытку.")
         self.bot.register_next_step_handler(message, self.is_answer_right)
