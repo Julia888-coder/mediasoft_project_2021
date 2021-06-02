@@ -52,11 +52,11 @@ def handle_text_message(message):
     user_input = message.text.lower()
     if user_input == "статьи":
         bot.send_message(message.from_user.id, answers["Статьи"], reply_markup=markups.articles_markup())
-    elif user_input == "лекция 1":
+    elif "лекция 1" in user_input:
         bot.send_message(message.from_user.id, lectures["1"]["sources"], reply_markup=markups.articles_markup())
-    elif user_input == "лекция 2":
+    elif "лекция 2" in user_input:
         bot.send_message(message.from_user.id, lectures["2"]["sources"], reply_markup=markups.articles_markup())
-    elif user_input == "лекция 3":
+    elif "лекция 3" in user_input:
         bot.send_message(message.from_user.id, lectures["3"]["sources"], reply_markup=markups.articles_markup())
     elif user_input == "ресурсы":
         bot.send_message(message.from_user.id, answers["Ресурсы"])
