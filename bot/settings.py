@@ -1,7 +1,6 @@
 import json
 import os
 
-# Ключ доступа к сообществу
 token = os.getenv('TOKEN')
 
 with open('./resources/json/lectures.json', 'r', encoding='UTF-8') as read_file:

@@ -1,5 +1,5 @@
 import markups
-from settings import token, answers
+from settings import token, answers, lectures
 from test import Test
 from telebot import TeleBot
 
@@ -34,22 +34,25 @@ def send_lectures(message):
     user_id = message.chat.id
     bot.send_message(user_id, answers['tests'], reply_markup=markups.lectures_markup())
 
+
 @bot.message_handler(commands=['homework'])
-def send_homework(message):
+def send_homework_info(message):
     user_id = message.chat.id
     bot.send_message(user_id, answers['homework'], reply_markup=markups.homework_markup())
 
+
 @bot.message_handler(regexp='Домашние задания')
-def send_homework1(message):
+def send_homework(message):
     user_id = message.chat.id
     bot.send_message(user_id, answers['Домашние задания'])
+
 
 @bot.message_handler(regexp='Задания по лекциям')
 def send_tasks(message):
     user_id = message.chat.id
-    bot.send_message(user_id, answers['з1'])
-    bot.send_message(user_id, answers['з2'])
-    bot.send_message(user_id, answers['з3'])
+    bot.send_message(user_id, answers['дз1'])
+    bot.send_message(user_id, answers['дз2'])
+    bot.send_message(user_id, answers['дз3'])
 
 
 @bot.message_handler(regexp='Видеолекции')
@@ -76,22 +79,14 @@ def send_articles(message):
     bot.send_message(user_id, answers['Статьи'], reply_markup=markups.articles_markup())
 
 
-@bot.message_handler(regexp='Лекция 1')
-def send_first_article(message):
+@bot.message_handler(regexp='Лекция')
+def send_lectures_sources(message):
     user_id = message.chat.id
-    bot.send_message(user_id, answers['Лекция 1'], reply_markup=markups.articles_markup())
-
-
-@bot.message_handler(regexp='Лекция 2')
-def send_second_article(message):
-    user_id = message.chat.id
-    bot.send_message(user_id, answers['Лекция 2'], reply_markup=markups.articles_markup())
-
-
-@bot.message_handler(regexp='Лекция 3')
-def send_third_article(message):
-    user_id = message.chat.id
-    bot.send_message(user_id, answers['Лекция 3'], reply_markup=markups.articles_markup())
+    lecture_number = message.text[-1]
+    if int(lecture_number) > len(lectures):
+        bot.send_message(user_id, "Такой лекции пока нет..", reply_markup=markups.articles_markup())
+    else:
+        bot.send_message(user_id, lectures[str(lecture_number)]["sources"], reply_markup=markups.articles_markup())
 
 
 @bot.callback_query_handler(func=lambda call: True)

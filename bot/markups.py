@@ -8,7 +8,7 @@ def empty_markup():
 
 
 def inf_markup():
-    markup = ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
+    markup = ReplyKeyboardMarkup(resize_keyboard=True)
     books_button = KeyboardButton('Книги')
     video_lectures_button = KeyboardButton('Видеолекции')
     articles_button = KeyboardButton('Статьи')
@@ -22,8 +22,8 @@ def homework_markup():
     markup = ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
     homework1_button = KeyboardButton('Домашние задания')
     tasks_button = KeyboardButton('Задания по лекциям')
-    markup.row(homework1_button)
-    markup.row(tasks_button)
+    markup.add(homework1_button)
+    markup.add(tasks_button)
     return markup
 
 
