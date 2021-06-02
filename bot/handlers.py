@@ -34,11 +34,22 @@ def send_lectures(message):
     user_id = message.chat.id
     bot.send_message(user_id, answers['tests'], reply_markup=markups.lectures_markup())
 
-
-@bot.message_handler(regexp='Книги')
-def send_books(message):
+@bot.message_handler(commands=['homework'])
+def send_homework(message):
     user_id = message.chat.id
-    bot.send_message(user_id, answers['Книги'])
+    bot.send_message(user_id, answers['homework'], reply_markup=markups.homework_markup())
+
+@bot.message_handler(regexp='Домашние задания')
+def send_homework1(message):
+    user_id = message.chat.id
+    bot.send_message(user_id, answers['Домашние задания'])
+
+@bot.message_handler(regexp='Задания по лекциям')
+def send_tasks(message):
+    user_id = message.chat.id
+    bot.send_message(user_id, answers['з1'])
+    bot.send_message(user_id, answers['з2'])
+    bot.send_message(user_id, answers['з3'])
 
 
 @bot.message_handler(regexp='Видеолекции')

@@ -18,6 +18,15 @@ def inf_markup():
     return markup
 
 
+def homework_markup():
+    markup = ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
+    homework1_button = KeyboardButton('Домашние задания')
+    tasks_button = KeyboardButton('Задания по лекциям')
+    markup.row(homework1_button)
+    markup.row(tasks_button)
+    return markup
+
+
 def articles_markup():
     markup = ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
     for i in range(1, len(lectures) + 1):
