@@ -1,4 +1,4 @@
-Юлия Белозерова
+**Юлия Белозерова**
 
 [@Analyst_MediaSoftbot](https://t.me/Analyst_MediaSoftbot)
 
