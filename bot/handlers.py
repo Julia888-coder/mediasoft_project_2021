@@ -60,6 +60,8 @@ def handle_text_message(message):
         bot.send_message(message.from_user.id, lectures["3"]["sources"], reply_markup=markups.articles_markup())
     elif user_input == "ресурсы":
         bot.send_message(message.from_user.id, answers["Ресурсы"])
+    elif user_input == "книги":
+        bot.send_message(message.from_user.id, answers["Книги"])
     elif user_input == "видеолекции":
         bot.send_message(message.from_user.id, answers["Видеолекции"])
     elif user_input == "задания по лекциям":
