@@ -62,7 +62,7 @@
               "waterfall model",
               "waterfall"
             ],
-            "image_path": "../resources/images/1.1.5.png"
+            "image_path": "resources/images/1.1.5.png"
           }
         }
       }
@@ -78,27 +78,27 @@
           "1": {
             "question_text": "Какая это нотация?",
             "correct_answer": "flowchart",
-            "image_path": "../resources/images/2.1.1.png"
+            "image_path": "resources/images/2.1.1.png"
           },
           "2": {
             "question_text": "Какая это нотация?",
             "correct_answer": "idef0",
-            "image_path": "../resources/images/2.1.2.png"
+            "image_path": "resources/images/2.1.2.png"
           },
           "3": {
             "question_text": "Какая это нотация?",
             "correct_answer": "epc",
-            "image_path": "../resources/images/2.1.3.png"
+            "image_path": "resources/images/2.1.3.png"
           },
           "4": {
             "question_text": "Какая это нотация?",
             "correct_answer": "idef0",
-            "image_path": "../resources/images/2.1.4.png"
+            "image_path": "resources/images/2.1.4.png"
           },
           "5": {
             "question_text": "Какая это нотация?",
             "correct_answer": "bpmn",
-            "image_path": "../resources/images/2.1.5.png"
+            "image_path": "resources/images/2.1.5.png"
           }
         }
       },
@@ -111,12 +111,12 @@
               "event",
               "событие"
             ],
-            "image_path": "../resources/images/2.2.1.png"
+            "image_path": "resources/images/2.2.1.png"
           },
           "2": {
             "question_text": "Какой это вид события?",
             "correct_answer": "сигналы",
-            "image_path": "../resources/images/2.2.3.png"
+            "image_path": "resources/images/2.2.3.png"
           },
           "3": {
             "question_text": "Какой это вид события?",
@@ -124,12 +124,12 @@
               "сообщения",
               "сообщение"
             ],
-            "image_path": "../resources/images/2.2.2.png"
+            "image_path": "resources/images/2.2.2.png"
           },
           "4": {
             "question_text": "Какой это вид события?",
             "correct_answer": "таймеры",
-            "image_path": "../resources/images/2.2.4.png"
+            "image_path": "resources/images/2.2.4.png"
           },
           "5": {
             "question_text": "Какой это вид события?",
@@ -137,7 +137,7 @@
               "ошибки",
               "ошибка"
             ],
-            "image_path": "../resources/images/2.2.5.png"
+            "image_path": "resources/images/2.2.5.png"
           },
           "6": {
             "question_text": "Что тут изображено?",
@@ -145,7 +145,7 @@
               "activity",
               "действие"
             ],
-            "image_path": "../resources/images/2.2.6.png"
+            "image_path": "resources/images/2.2.6.png"
           },
           "7": {
             "question_text": "Что тут изображено?",
@@ -153,22 +153,22 @@
               "gateway",
               "шлюз"
             ],
-            "image_path": "../resources/images/2.2.7.png"
+            "image_path": "resources/images/2.2.7.png"
           },
           "8": {
             "question_text": "Какой вид шлюза изображён?",
             "correct_answer": "параллельный шлюз",
-            "image_path": "../resources/images/2.2.8.png"
+            "image_path": "resources/images/2.2.8.png"
           },
           "9": {
             "question_text": "Какой вид шлюза изображён?",
             "correct_answer": "эксклюзивный шлюз",
-            "image_path": "../resources/images/2.2.9.png"
+            "image_path": "resources/images/2.2.9.png"
           },
           "10": {
             "question_text": "Какой вид шлюза изображён?",
             "correct_answer": "неэксклюзивный шлюз",
-            "image_path": "../resources/images/2.2.10.png"
+            "image_path": "resources/images/2.2.10.png"
           }
         }
       }
